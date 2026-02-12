@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #020617; /* slate-950 */
+  --foreground: #e5e7eb; /* gray-200 */
+}
+
+body {
+  color: var(--foreground);
+  background: radial-gradient(circle at top left, #0f172a 0, #020617 40%, #050816 80%);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", sans-serif;
+}
+
+.cp-gradient-bg {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.cp-gradient-blob {
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  border-radius: 9999px;
+  filter: blur(80px);
+  opacity: 0.45;
+  mix-blend-mode: screen;
+  animation: cp-float 22s infinite alternate ease-in-out;
+}
+
+.cp-gradient-blob:nth-child(1) {
+  background: radial-gradient(circle, #22c55e, transparent 65%);
+  top: -120px;
+  left: -80px;
+}
+
+.cp-gradient-blob:nth-child(2) {
+  background: radial-gradient(circle, #38bdf8, transparent 65%);
+  top: 40%;
+  right: -160px;
+  animation-delay: 4s;
+}
+
+.cp-gradient-blob:nth-child(3) {
+  background: radial-gradient(circle, #a855f7, transparent 65%);
+  bottom: -160px;
+  left: 20%;
+  animation-delay: 8s;
+}
+
+@keyframes cp-float {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(40px, -60px, 0) scale(1.05);
+  }
+  100% {
+    transform: translate3d(-30px, 40px, 0) scale(0.98);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .cp-card {
+    @apply rounded-2xl border border-slate-800/80 bg-slate-900/70 shadow-[0_18px_45px_rgba(15,23,42,0.8)] backdrop-blur-xl;
+  }
+
+  .cp-pill {
+    @apply rounded-full border border-slate-700/70 bg-slate-900/80 px-3 py-1 text-[11px] text-slate-300;
+  }
+}
