@@ -47,16 +47,3 @@ For a detailed step-by-step guide to running the project and verifying all featu
 3. **Connect**: Use Pera Wallet on Testnet to interact with all features.
 
 ---
-
-## ✅ Hackathon Requirements Check
-- [x] **Send/Receive Payments** (Dashboard)
-- [x] **Split Expenses** (Expense Manager)
-- [x] **Event Ticketing** (Events + QR check-in)
-- [x] **Raise Money** (Fundraisers)
-- [x] **Save Funds** (Savings Vault)
-- [x] **GitHub Representation**: ~100% logic implemented in this repository.
-- [x] **On-Chain Transparency**: Explicit fee tracking and verified blockchain status.
-
----
-
-Developed with ❤️ for the Campus Hackathon.
